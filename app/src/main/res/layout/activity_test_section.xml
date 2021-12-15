@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:fillViewport="false"
+    >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test_section">
+
+
+    <TextView
+        android:id="@+id/txtTestName"
+        android:layout_width="300dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="32dp"
+        android:capitalize="none"
+        android:text="Тест: название"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textQuestionField"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="32dp"
+        android:text="текст_вопроса"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTestName" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="44dp"
+        android:text="Вперёд"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbgAnswerGroup" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:text="Назад"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbgAnswerGroup" />
+
+    <RadioGroup
+        android:id="@+id/rbgAnswerGroup"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textQuestionField">
+
+        <RadioButton
+            android:id="@+id/rbtn1Ans"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="вариант_1" />
+
+        <RadioButton
+            android:id="@+id/rbtn2Ans"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:text="вариант_2" />
+
+        <RadioButton
+            android:id="@+id/rbtn3Ans"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="вариант_3" />
+
+        <RadioButton
+            android:id="@+id/rbtn4Ans"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:text="вариант_4" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txtFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="ФИО"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtTestCounter"
+        android:layout_width="118dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="36dp"
+        android:text="xx/xx"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/btnNext"
+        app:layout_constraintTop_toBottomOf="@+id/rbgAnswerGroup" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
